@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Employee Management App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a href="#" onclick="showPage('dashboard')">Dashboard</a>
+    <a href="#" onclick="showPage('add')">Add Employee</a>
+    <a href="#" onclick="showPage('view')">View Employees</a>
+  </nav>
+
+  <!-- Dashboard Page -->
+  <div class="container" id="dashboardPage">
+    <h1>Welcome to Employee Management System</h1>
+    <p>Use the navigation above to manage your employees.</p>
+  </div>
+
+  <!-- Add Employee Page -->
+  <div class="container" id="addPage" style="display:none">
+    <h2>Add New Employee</h2>
+    <form id="addForm">
+      <input type="text" id="name" placeholder="Name" required />
+      <input type="text" id="position" placeholder="Position" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="text" id="location" placeholder="Location" required />
+      <button type="submit">Save</button>
+    </form>
+  </div>
+
+  <!-- View Employees Page -->
+  <div class="container" id="viewPage" style="display:none">
+    <h2>Employee List</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Position</th>
+          <th>Email</th>
+          <th>Location</th>
+        </tr>
+      </thead>
+      <tbody id="employeeList"></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
